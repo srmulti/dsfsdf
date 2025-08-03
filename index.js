@@ -2,6 +2,9 @@ import { Telegraf, Markup } from 'telegraf';
 import fetch from 'node-fetch';
 import { format } from 'date-fns';
 
+import http from 'http';
+http.createServer((req, res) => res.end('Bot is running')).listen(process.env.PORT || 3000);
+
 // Загружаем админов из JSON
 async function loadAdmins() {
   try {
